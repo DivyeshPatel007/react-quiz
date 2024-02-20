@@ -1,5 +1,7 @@
 import React from 'react'
-function FinishScreen({ points,maxPossiblePoints,dispatchFn }) {
+import { useQuiz } from './context/QuizContext'
+function FinishScreen() {
+    const { points,maxPossiblePoints,dispatchFn }=useQuiz()
     const percentage = (points / maxPossiblePoints) * 100
     return (
         <>
